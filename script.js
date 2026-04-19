@@ -77,6 +77,7 @@
   const setFlow = (idx) => {
     steps.forEach((s, i) => {
       s.classList.toggle('active', i === idx);
+      s.classList.toggle('completed', i < idx);
       s.setAttribute('aria-selected', i === idx ? 'true' : 'false');
     });
     panels.forEach((p, i) => p.classList.toggle('active', i === idx));
