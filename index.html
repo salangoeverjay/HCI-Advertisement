@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>KA-BAYAN SYNC — Your Neighborhood, Synced.</title>
+<meta name="description" content="Hyper-local neighborhood task platform for Panabo City. Biometric-verified workers, GPS tracking, and secure payments. Your trusted Ka-Bayan, one tap away." />
+
+<!-- Fonts: Fraunces (display, editorial) + Plus Jakarta Sans (body, warm geometric) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== DECORATIVE GRAIN OVERLAY ===== -->
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ===== NAVIGATION ===== -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-brand" aria-label="Ka-Bayan Sync home">
+      <!-- Animated inline SVG logo -->
+      <span class="logo-mark" aria-hidden="true">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <!-- Carabao head silhouette -->
+          <g class="logo-body">
+            <!-- Horns -->
+            <path class="logo-horn logo-horn-left" d="M25 30 Q15 20 8 28 Q12 32 20 35 Z" fill="#8B1D3D"/>
+            <path class="logo-horn logo-horn-right" d="M75 30 Q85 20 92 28 Q88 32 80 35 Z" fill="#8B1D3D"/>
+            <!-- Head -->
+            <path d="M20 40 Q20 25 50 22 Q80 25 80 40 L80 70 Q80 82 65 85 L35 85 Q20 82 20 70 Z" fill="#8B1D3D"/>
+            <!-- Left eye (wink) -->
+            <path class="logo-eye-wink" d="M36 48 Q40 45 44 48" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Right eye -->
+            <circle class="logo-eye-open" cx="62" cy="48" r="3" fill="#FFF4E6"/>
+            <!-- Smile -->
+            <path class="logo-smile" d="M38 60 Q50 70 62 60" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <!-- Nose dots -->
+            <circle cx="46" cy="56" r="1.2" fill="#FFF4E6" opacity="0.6"/>
+            <circle cx="54" cy="56" r="1.2" fill="#FFF4E6" opacity="0.6"/>
+          </g>
+        </svg>
+      </span>
+      <span class="nav-wordmark">
+        <span class="nav-word-top">KA-BAYAN</span>
+        <span class="nav-word-bot">SYNC</span>
+      </span>
+    </a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#how" data-nav>How it works</a>
+      <a href="#features" data-nav>Security</a>
+      <a href="#compare" data-nav>Compare</a>
+      <a href="#flow" data-nav>Flow</a>
+    </nav>
+
+    <a href="#cta" class="nav-cta">
+      <span>Join the Barangay</span>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <!-- Background ornaments -->
+  <div class="hero-bg" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <svg class="hero-grid" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.15"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)"/>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="hero-badge reveal">
+        <span class="pulse-dot"></span>
+        <span>Live in Panabo City · 2km hyper-local radius</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="reveal reveal-1">Your <em>Ka-Bayan</em>,</span>
+        <span class="reveal reveal-2">one scan away.</span>
+      </h1>
+
+      <p class="hero-sub reveal reveal-3">
+        Verified neighbors. Real-time GPS. Camera-locked evidence. We turned the sari-sari economy of favors into a trust system — so your laundry, <em>pabili</em>, and chores are always in safe hands.
+      </p>
+
+      <div class="hero-actions reveal reveal-4">
+        <a href="#cta" class="btn btn-primary">
+          <span>Post your first task</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how" class="btn btn-ghost">
+          <span class="btn-play-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 5v14l11-7z" fill="currentColor"/></svg>
+          </span>
+          <span>See how it works</span>
+        </a>
+      </div>
+
+      <div class="hero-stats reveal reveal-5">
+        <div class="stat">
+          <div class="stat-num" data-count="2">0</div>
+          <div class="stat-label">km radius</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-num" data-count="100">0</div>
+          <div class="stat-label">% verified</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <div class="stat-num" data-count="30">0</div>
+          <div class="stat-label">min disputes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Phone mockup with floating cards -->
+    <div class="hero-visual reveal reveal-6">
+      <div class="float-card float-card-1">
+        <div class="fc-icon fc-icon-scan">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 7V5a1 1 0 0 1 1-1h2M17 4h2a1 1 0 0 1 1 1v2M20 17v2a1 1 0 0 1-1 1h-2M7 20H5a1 1 0 0 1-1-1v-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div>
+          <div class="fc-title">Face Scan Verified</div>
+          <div class="fc-sub">Juan Z. · 0.6km</div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-2">
+        <div class="fc-icon fc-icon-gps">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 22s-8-7.5-8-13a8 8 0 1 1 16 0c0 5.5-8 13-8 13z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="9" r="2.5" stroke="currentColor" stroke-width="2"/></svg>
+        </div>
+        <div>
+          <div class="fc-title">GPS Locked</div>
+          <div class="fc-sub">Brgy. Sto. Niño</div>
+        </div>
+      </div>
+
+      <div class="float-card float-card-3">
+        <div class="fc-icon fc-icon-peso">
+          <span style="font-weight:800;font-size:14px">₱</span>
+        </div>
+        <div>
+          <div class="fc-title">₱207 released</div>
+          <div class="fc-sub">Task complete</div>
+        </div>
+      </div>
+
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <!-- Mini phone UI mock -->
+          <div class="mini-header">
+            <div class="mini-time">12:30</div>
+            <div class="mini-brand">KA-BAYAN SYNC</div>
+            <div class="mini-avatar"></div>
+          </div>
+
+          <div class="mini-map">
+            <div class="mini-map-pulse">
+              <span></span><span></span><span></span>
+            </div>
+            <div class="mini-avatar-pin">
+              <div class="mini-avatar-ring"></div>
+            </div>
+            <svg class="mini-streets" viewBox="0 0 300 200" preserveAspectRatio="none">
+              <path d="M-10 60 L310 80" stroke="#F57C24" stroke-width="4" opacity="0.35"/>
+              <path d="M-10 130 L310 150" stroke="#F57C24" stroke-width="4" opacity="0.25"/>
+              <path d="M80 -10 L100 210" stroke="#8B1D3D" stroke-width="3" opacity="0.2"/>
+              <path d="M210 -10 L230 210" stroke="#8B1D3D" stroke-width="3" opacity="0.2"/>
+            </svg>
+          </div>
+
+          <div class="mini-card">
+            <div class="mini-worker">
+              <div class="mini-worker-avatar"></div>
+              <div>
+                <div class="mini-worker-name">Juan Z. <span class="mini-verified">✓ VERIFIED</span></div>
+                <div class="mini-worker-meta">★ 4.7 · 1 m away</div>
+              </div>
+            </div>
+            <div class="mini-scan">
+              <div class="mini-scan-icon">
+                <div class="mini-scan-dot"></div>
+              </div>
+              <div>
+                <div class="mini-scan-title">Entrance Face Scan</div>
+                <div class="mini-scan-sub">Verifying 100% match…</div>
+              </div>
+            </div>
+            <div class="mini-row"><span>Task ID</span><span class="mini-val">#KB-4082790</span></div>
+            <div class="mini-row"><span>Mode</span><span class="mini-tag">RUSH</span></div>
+            <div class="mini-total">
+              <span>Total Payment</span>
+              <span class="mini-total-val">₱230</span>
+            </div>
+          </div>
+
+          <div class="mini-nav">
+            <div class="mini-nav-item active"><span></span>Home</div>
+            <div class="mini-nav-item"><span></span>Tasks</div>
+            <div class="mini-nav-item"><span></span>Wallet</div>
+            <div class="mini-nav-item"><span></span>Profile</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sticker elements -->
+      <div class="sticker sticker-1">
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="none" stroke="#F57C24" stroke-width="1.5" stroke-dasharray="4 3"/></svg>
+        <span>hyper-local</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>PABILI</span><span class="dot">●</span>
+      <span>LAUNDRY</span><span class="dot">●</span>
+      <span>DISHWASHING</span><span class="dot">●</span>
+      <span>HOUSE CLEANING</span><span class="dot">●</span>
+      <span>PANABO CITY</span><span class="dot">●</span>
+      <span>VERIFIED NEIGHBORS</span><span class="dot">●</span>
+      <span>PABILI</span><span class="dot">●</span>
+      <span>LAUNDRY</span><span class="dot">●</span>
+      <span>DISHWASHING</span><span class="dot">●</span>
+      <span>HOUSE CLEANING</span><span class="dot">●</span>
+      <span>PANABO CITY</span><span class="dot">●</span>
+      <span>VERIFIED NEIGHBORS</span><span class="dot">●</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROBLEM ===== -->
+<section class="problem">
+  <div class="container">
+    <div class="problem-grid">
+      <div class="problem-copy">
+        <div class="eyebrow">The problem</div>
+        <h2 class="section-title">Hiring a stranger from a Facebook post shouldn't feel like a gamble.</h2>
+      </div>
+      <div class="problem-list">
+        <div class="prob-card" data-anim="fade-up">
+          <div class="prob-num">01</div>
+          <div>
+            <h3>Identity risk</h3>
+            <p>Unvetted individuals showing up at your door with nothing but a profile photo.</p>
+          </div>
+        </div>
+        <div class="prob-card" data-anim="fade-up">
+          <div class="prob-num">02</div>
+          <div>
+            <h3>Fake completion</h3>
+            <p>Edited screenshots and old photos passed off as "done" — with no way to verify.</p>
+          </div>
+        </div>
+        <div class="prob-card" data-anim="fade-up">
+          <div class="prob-num">03</div>
+          <div>
+            <h3>Cash handling</h3>
+            <p>Handing over ₱500 for <em>pabili</em> and hoping the change comes back.</p>
+          </div>
+        </div>
+        <div class="prob-card" data-anim="fade-up">
+          <div class="prob-num">04</div>
+          <div>
+            <h3>No accountability</h3>
+            <p>No ratings, no history, no consequence. Just word-of-mouth in a city of thousands.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow eyebrow-light">How it works</div>
+      <h2 class="section-title">Four scans between you and peace of mind.</h2>
+      <p class="section-sub">Every task is a sealed loop — entrance, execution, evidence, exit. No loose ends.</p>
+    </div>
+
+    <div class="steps">
+      <div class="step" data-anim="fade-up">
+        <div class="step-index">1</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="6" y="10" width="36" height="28" rx="4" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="24" cy="22" r="4" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M14 32c2-4 6-4 10-4s8 0 10 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Post a task</h3>
+        <p>Choose laundry, pabili, cleaning, or dishwashing. Set standard or rush. Pin it to the community board.</p>
+      </div>
+
+      <div class="step" data-anim="fade-up">
+        <div class="step-index">2</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M24 42s-14-12-14-22a14 14 0 0 1 28 0c0 10-14 22-14 22z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+            <circle cx="24" cy="20" r="5" stroke="currentColor" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <h3>Verified Ka-Bayan accepts</h3>
+        <p>A face-scanned, ID-matched neighbor within 2km takes the job. Real name. Real face. Real trust score.</p>
+      </div>
+
+      <div class="step" data-anim="fade-up">
+        <div class="step-index">3</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="10" y="14" width="28" height="22" rx="3" stroke="currentColor" stroke-width="2.5"/>
+            <circle cx="24" cy="25" r="6" stroke="currentColor" stroke-width="2.5"/>
+            <path d="M18 14l2-4h8l2 4" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Live evidence capture</h3>
+        <p>Camera-only. Gallery locked. Every photo watermarked with GPS + timestamp. AI filters for moiré and edits.</p>
+      </div>
+
+      <div class="step" data-anim="fade-up">
+        <div class="step-index">4</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 48 48" fill="none">
+            <path d="M10 24l10 10 18-20" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Exit scan, auto payment</h3>
+        <p>Second face scan confirms who did the work. Payment releases. Trust score updates. Done.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECURITY FEATURES ===== -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="feat-head">
+      <div class="eyebrow">Built-in security</div>
+      <h2 class="section-title">Four layers. Zero guesswork.</h2>
+    </div>
+
+    <div class="feat-grid">
+      <!-- Biometric -->
+      <article class="feat-card feat-card-wide" data-anim="fade-up">
+        <div class="feat-visual feat-visual-bio">
+          <div class="face-frame">
+            <div class="face-scan-line"></div>
+            <svg viewBox="0 0 120 120" class="face-icon">
+              <circle cx="60" cy="60" r="55" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4"/>
+              <circle cx="60" cy="55" r="22" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M30 95c8-12 22-16 30-16s22 4 30 16" fill="none" stroke="currentColor" stroke-width="2"/>
+            </svg>
+            <div class="face-corner tl"></div>
+            <div class="face-corner tr"></div>
+            <div class="face-corner bl"></div>
+            <div class="face-corner br"></div>
+          </div>
+        </div>
+        <div class="feat-content">
+          <div class="feat-tag">01 · IDENTITY</div>
+          <h3>Biometric Identity Mapping</h3>
+          <p>A 5-second liveness face scan, cross-referenced with Student, National, or Barangay ID. Every worker. Every task. Entrance and exit.</p>
+          <ul class="feat-bullets">
+            <li>Liveness detection (no photos of photos)</li>
+            <li>Cross-ID document matching</li>
+            <li>Face scan required to start <em>and</em> finish</li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Camera Lock -->
+      <article class="feat-card" data-anim="fade-up">
+        <div class="feat-visual feat-visual-cam">
+          <div class="cam-badge">
+            <svg viewBox="0 0 40 40" fill="none">
+              <rect x="6" y="12" width="28" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+              <circle cx="20" cy="22" r="5" stroke="currentColor" stroke-width="2"/>
+              <path d="M14 12l2-3h8l2 3" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="cam-label">LIVE ONLY</div>
+          <div class="cam-strike"></div>
+        </div>
+        <div class="feat-content">
+          <div class="feat-tag">02 · EVIDENCE</div>
+          <h3>Camera Intent Lock</h3>
+          <p>No gallery uploads. Live capture only, sealed with GPS + timestamp watermark and AI moiré detection.</p>
+        </div>
+      </article>
+
+      <!-- Settlement -->
+      <article class="feat-card" data-anim="fade-up">
+        <div class="feat-visual feat-visual-pay">
+          <div class="qr-mock">
+            <div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell"></div>
+            <div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dark"></div>
+            <div class="qr-cell"></div><div class="qr-cell dark"></div><div class="qr-cell dark"></div><div class="qr-cell"></div>
+            <div class="qr-cell dark"></div><div class="qr-cell"></div><div class="qr-cell"></div><div class="qr-cell dark"></div>
+          </div>
+          <div class="peso-float">₱</div>
+        </div>
+        <div class="feat-content">
+          <div class="feat-tag">03 · PAYMENT</div>
+          <h3>Secure Settlement Protocol</h3>
+          <p>For pabili over ₱200, you pay the merchant directly by QR. The worker is a courier — never a cash handler.</p>
+        </div>
+      </article>
+
+      <!-- Trust Score -->
+      <article class="feat-card feat-card-wide" data-anim="fade-up">
+        <div class="feat-visual feat-visual-trust">
+          <div class="trust-meter">
+            <svg viewBox="0 0 200 120">
+              <path d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="12" stroke-linecap="round"/>
+              <path class="trust-arc" d="M 20 100 A 80 80 0 0 1 180 100" fill="none" stroke="url(#trustGrad)" stroke-width="12" stroke-linecap="round" stroke-dasharray="251" stroke-dashoffset="50"/>
+              <defs>
+                <linearGradient id="trustGrad" x1="0" x2="1">
+                  <stop offset="0%" stop-color="#F57C24"/>
+                  <stop offset="100%" stop-color="#FDB64A"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="trust-val">
+              <div class="trust-num">4.8</div>
+              <div class="trust-lbl">TRUST SCORE</div>
+            </div>
+          </div>
+          <div class="trust-pills">
+            <span class="pill">67 tasks</span>
+            <span class="pill">30 neighbors</span>
+            <span class="pill pill-green">Verified</span>
+          </div>
+        </div>
+        <div class="feat-content">
+          <div class="feat-tag">04 · REPUTATION</div>
+          <h3>Dynamic Trust Score</h3>
+          <p>Built from completion history, GPS punctuality, and neighbor ratings. It can't be bought, only earned.</p>
+          <ul class="feat-bullets">
+            <li>First 5 tasks: Rookie status, pabili locked</li>
+            <li>Real-time adjustment per completed task</li>
+            <li>Wallet fail-safe — below ₱10 = ineligible</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="services">
+  <div class="container">
+    <div class="eyebrow">What you can ask for</div>
+    <h2 class="section-title">Small favors. Big relief.</h2>
+
+    <div class="service-grid">
+      <div class="service-card" data-anim="fade-up">
+        <div class="service-ico">
+          <svg viewBox="0 0 64 64" fill="none">
+            <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="3"/>
+            <path d="M12 34h20l4 18H8z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M40 14h16M40 22h16M40 30h12" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Pabili</h3>
+        <p>Grocery runs, errands, the stuff you forgot. Over ₱200 pays merchant direct.</p>
+      </div>
+
+      <div class="service-card" data-anim="fade-up">
+        <div class="service-ico">
+          <svg viewBox="0 0 64 64" fill="none">
+            <rect x="10" y="8" width="44" height="48" rx="4" stroke="currentColor" stroke-width="3"/>
+            <circle cx="32" cy="36" r="12" stroke="currentColor" stroke-width="3"/>
+            <circle cx="32" cy="36" r="6" stroke="currentColor" stroke-width="2"/>
+            <circle cx="18" cy="18" r="2" fill="currentColor"/>
+          </svg>
+        </div>
+        <h3>Laundry</h3>
+        <p>Pick up, wash, fold, return — all within 2 km. Before/after photo logged.</p>
+      </div>
+
+      <div class="service-card" data-anim="fade-up">
+        <div class="service-ico">
+          <svg viewBox="0 0 64 64" fill="none">
+            <path d="M16 18l32 4-4 32-28 4z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M24 28l12 12M36 28L24 40" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <h3>Dishwashing</h3>
+        <p>Post-gathering stacks cleared. Logged, timed, and closed out with exit scan.</p>
+      </div>
+
+      <div class="service-card" data-anim="fade-up">
+        <div class="service-ico">
+          <svg viewBox="0 0 64 64" fill="none">
+            <path d="M20 10v20M28 10v20M12 30h24l-2 24H14z" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+            <path d="M40 40l12-20 6 4-12 20" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>House Cleaning</h3>
+        <p>Light, moderate, or heavy — room by room. Before/after evidence mandatory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COMPARISON ===== -->
+<section class="compare" id="compare">
+  <div class="container">
+    <div class="eyebrow">Why not the big apps?</div>
+    <h2 class="section-title">Built for the barangay. Not the boardroom.</h2>
+
+    <div class="compare-table" role="table" aria-label="Platform comparison">
+      <div class="cmp-row cmp-head" role="row">
+        <div role="columnheader">Feature</div>
+        <div role="columnheader" class="cmp-us">KA-BAYAN SYNC</div>
+        <div role="columnheader">Grab</div>
+        <div role="columnheader">MyKuya</div>
+        <div role="columnheader">GoodWork</div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div role="cell" data-label="Feature"><strong>Focus</strong></div>
+        <div role="cell" data-label="KA-BAYAN" class="cmp-us">Local chores</div>
+        <div role="cell" data-label="Grab">Delivery</div>
+        <div role="cell" data-label="MyKuya">Assistants</div>
+        <div role="cell" data-label="GoodWork">Skilled work</div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div role="cell" data-label="Feature"><strong>Identity</strong></div>
+        <div role="cell" data-label="KA-BAYAN" class="cmp-us">Face scan per task</div>
+        <div role="cell" data-label="Grab">Login only</div>
+        <div role="cell" data-label="MyKuya">Manual</div>
+        <div role="cell" data-label="GoodWork">Background check</div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div role="cell" data-label="Feature"><strong>Radius</strong></div>
+        <div role="cell" data-label="KA-BAYAN" class="cmp-us">2 km hyper-local</div>
+        <div role="cell" data-label="Grab">City-wide</div>
+        <div role="cell" data-label="MyKuya">City-wide</div>
+        <div role="cell" data-label="GoodWork">City-wide</div>
+      </div>
+
+      <div class="cmp-row" role="row">
+        <div role="cell" data-label="Feature"><strong>Proof of work</strong></div>
+        <div role="cell" data-label="KA-BAYAN" class="cmp-us">GPS + live photos</div>
+        <div role="cell" data-label="Grab">GPS only</div>
+        <div role="cell" data-label="MyKuya">Chat logs</div>
+        <div role="cell" data-label="GoodWork">Written report</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTERACTIVE TASK FLOW ===== -->
+<section class="flow" id="flow">
+  <div class="container">
+    <div class="eyebrow eyebrow-light">The seven-step loop</div>
+    <h2 class="section-title">Tap each stage. Watch the trust build.</h2>
+
+    <div class="flow-wrap">
+      <div class="flow-steps" role="tablist" aria-label="Task flow stages">
+        <button class="flow-step active" data-flow="0" role="tab" aria-selected="true">
+          <span class="flow-dot">1</span>
+          <span class="flow-label">Post Task</span>
+        </button>
+        <button class="flow-step" data-flow="1" role="tab" aria-selected="false">
+          <span class="flow-dot">2</span>
+          <span class="flow-label">Worker Accepts</span>
+        </button>
+        <button class="flow-step" data-flow="2" role="tab" aria-selected="false">
+          <span class="flow-dot">3</span>
+          <span class="flow-label">Entrance Scan</span>
+        </button>
+        <button class="flow-step" data-flow="3" role="tab" aria-selected="false">
+          <span class="flow-dot">4</span>
+          <span class="flow-label">Execution</span>
+        </button>
+        <button class="flow-step" data-flow="4" role="tab" aria-selected="false">
+          <span class="flow-dot">5</span>
+          <span class="flow-label">Evidence</span>
+        </button>
+        <button class="flow-step" data-flow="5" role="tab" aria-selected="false">
+          <span class="flow-dot">6</span>
+          <span class="flow-label">Exit Scan</span>
+        </button>
+        <button class="flow-step" data-flow="6" role="tab" aria-selected="false">
+          <span class="flow-dot">7</span>
+          <span class="flow-label">Payment</span>
+        </button>
+        <div class="flow-progress"><div class="flow-progress-fill" id="flowProgress"></div></div>
+      </div>
+
+      <div class="flow-panels">
+        <div class="flow-panel active" data-panel="0">
+          <h3>1. Post your task</h3>
+          <p>Choose service type, complexity, and mode. Rush costs a small surcharge — standard is free to post. The task lands on the Panabo community board within your 2 km radius.</p>
+        </div>
+        <div class="flow-panel" data-panel="1">
+          <h3>2. A verified neighbor accepts</h3>
+          <p>The task flashes for 15 seconds to nearby online Ka-Bayans. The first verified worker to accept takes it. You see their name, trust score, and distance instantly.</p>
+        </div>
+        <div class="flow-panel" data-panel="2">
+          <h3>3. Entrance face scan</h3>
+          <p>Worker arrives. <strong>Start Task</strong> stays locked until their face scan matches the ID on file. No match, no start — no exceptions.</p>
+        </div>
+        <div class="flow-panel" data-panel="3">
+          <h3>4. Task execution</h3>
+          <p>GPS keeps a live breadcrumb inside your radius. Low-battery? System fires a location ping at 1% as a final fail-safe.</p>
+        </div>
+        <div class="flow-panel" data-panel="4">
+          <h3>5. Evidence capture</h3>
+          <p>Before and after photos taken live — camera-only, watermarked with location and time, scanned by AI for tampering or moiré patterns.</p>
+        </div>
+        <div class="flow-panel" data-panel="5">
+          <h3>6. Exit face scan</h3>
+          <p><strong>Finish Task</strong> is locked until the second scan confirms the same person who started also finished. This is how fake completions die.</p>
+        </div>
+        <div class="flow-panel" data-panel="6">
+          <h3>7. Payment & rating</h3>
+          <p>Payment releases to the worker's wallet minus the 10% service fee. You rate the job. A 30-minute dispute window stays open just in case.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="cta">
+  <div class="container">
+    <div class="cta-card">
+      <div class="cta-copy">
+        <div class="eyebrow eyebrow-light">Panabo City, this is for you</div>
+        <h2>Join a neighborhood<br/>that actually <em>knows</em> you.</h2>
+        <p>Whether you need a hand or you're the hand — Ka-Bayan Sync is free to join. Keep a ₱30 trust bond. Start earning or start resting.</p>
+
+        <div class="cta-buttons">
+          <a href="#" class="btn btn-primary btn-lg">
+            <span>Hire a Ka-Bayan</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="#" class="btn btn-outline btn-lg">
+            <span>Become a Ka-Bayan</span>
+          </a>
+        </div>
+
+        <div class="cta-meta">
+          <span>✓ ₱30 trust bond</span>
+          <span>✓ 10% service fee</span>
+          <span>✓ 2 km radius</span>
+        </div>
+      </div>
+
+      <div class="cta-visual" aria-hidden="true">
+        <!-- Animated mascot cluster -->
+        <svg viewBox="0 0 300 300" class="cta-mascot">
+          <!-- Back circle glow -->
+          <circle cx="150" cy="150" r="120" fill="#F57C24" opacity="0.12"/>
+          <circle cx="150" cy="150" r="90" fill="#F57C24" opacity="0.2"/>
+
+          <!-- Mascot -->
+          <g class="cta-carabao">
+            <path d="M100 100 Q90 80 75 90 Q82 98 95 105 Z" fill="#FFF4E6"/>
+            <path d="M200 100 Q210 80 225 90 Q218 98 205 105 Z" fill="#FFF4E6"/>
+            <path d="M90 125 Q90 90 150 85 Q210 90 210 125 L210 190 Q210 220 175 225 L125 225 Q90 220 90 190 Z" fill="#FFF4E6"/>
+            <path class="cta-eye-wink" d="M120 145 Q127 140 134 145" stroke="#8B1D3D" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle class="cta-eye-open" cx="178" cy="145" r="5" fill="#8B1D3D"/>
+            <path d="M125 175 Q150 195 175 175" stroke="#8B1D3D" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <circle cx="140" cy="165" r="2" fill="#8B1D3D" opacity="0.6"/>
+            <circle cx="160" cy="165" r="2" fill="#8B1D3D" opacity="0.6"/>
+          </g>
+
+          <!-- Floating hearts / sparks -->
+          <g class="spark spark-1">
+            <path d="M50 80 L55 70 L60 80 L55 90 Z" fill="#F57C24"/>
+          </g>
+          <g class="spark spark-2">
+            <circle cx="250" cy="60" r="4" fill="#F57C24"/>
+          </g>
+          <g class="spark spark-3">
+            <path d="M260 220 L263 215 L268 218 L265 223 Z" fill="#8B1D3D"/>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-mark logo-mark-sm" aria-hidden="true">
+            <svg viewBox="0 0 100 100">
+              <path d="M25 30 Q15 20 8 28 Q12 32 20 35 Z" fill="currentColor"/>
+              <path d="M75 30 Q85 20 92 28 Q88 32 80 35 Z" fill="currentColor"/>
+              <path d="M20 40 Q20 25 50 22 Q80 25 80 40 L80 70 Q80 82 65 85 L35 85 Q20 82 20 70 Z" fill="currentColor"/>
+              <path d="M36 48 Q40 45 44 48" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <circle cx="62" cy="48" r="3" fill="#FFF4E6"/>
+              <path d="M38 60 Q50 70 62 60" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <div>
+            <div class="footer-word-top">KA-BAYAN</div>
+            <div class="footer-word-bot">SYNC</div>
+          </div>
+        </div>
+        <p>Hyper-local, biometric-verified task platform for Panabo City.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <a href="#how">How it works</a>
+        <a href="#features">Security</a>
+        <a href="#flow">Task flow</a>
+        <a href="#compare">Comparison</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#">Pabili</a>
+        <a href="#">Laundry</a>
+        <a href="#">Dishwashing</a>
+        <a href="#">House cleaning</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support</h4>
+        <a href="#">Help center</a>
+        <a href="#">Community rules</a>
+        <a href="#">Dispute policy</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <span>© 2026 KA-BAYAN SYNC · Made in Panabo City, Davao del Norte</span>
+      <span class="footer-tag">🇵🇭 Para sa bayan, para sa kapitbahay.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
