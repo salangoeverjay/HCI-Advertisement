@@ -25,6 +25,7 @@
 
   --color-line: rgba(139, 29, 61, 0.12);
   --color-line-strong: rgba(139, 29, 61, 0.22);
+  --mini-avatar-image: url("https://i.imgur.com/EbPdGdE.png");
 
   /* Type */
   --font-display: 'Open Sans', system-ui, sans-serif;
@@ -479,12 +480,14 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   z-index: 2;
 }
 .mini-avatar-ring {
-  position: absolute; inset: -6px;
+  position: absolute; inset: 0;
   border-radius: 50%;
-  border: 2px solid var(--color-orange);
-  animation: ringSpin 4s linear infinite;
+  border: 2px solid #fff;
+  box-shadow: 0 0 0 2px var(--color-orange);
+  background-image: var(--mini-avatar-image);
+  background-size: cover;
+  background-position: center;
 }
-@keyframes ringSpin { to { transform: rotate(360deg); } }
 
 .mini-card {
   background: white;
@@ -500,7 +503,10 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 .mini-worker { display: flex; gap: 10px; align-items: center; }
 .mini-worker-avatar {
   width: 38px; height: 38px; border-radius: 50%;
-  background: linear-gradient(135deg, #D4A574, #A57B4A);
+  background-image: var(--mini-avatar-image);
+  background-size: cover;
+  background-position: center;
+  background-color: #d8b38a;
   border: 2px solid var(--color-orange-tint);
 }
 .mini-worker-name { font-size: 13px; font-weight: 700; color: var(--color-burgundy); display: flex; align-items: center; gap: 6px; }
@@ -563,11 +569,11 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 }
 .mini-nav-item { font-size: 9px; font-weight: 700; color: var(--color-burgundy); display: flex; flex-direction: column; align-items: center; gap: 4px; opacity: 0.55; }
 .mini-nav-item.active { opacity: 1; color: var(--color-orange); }
-.mini-nav-item span {
-  width: 20px; height: 20px;
-  background: currentColor;
-  border-radius: 5px;
-  opacity: 0.8;
+.mini-nav-item svg {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+  opacity: 0.9;
 }
 
 /* Floating cards around phone */
@@ -1251,6 +1257,8 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   width: var(--flow-dot-size);
   height: var(--flow-dot-size);
   flex-shrink: 0;
+  position: relative;
+  z-index: 3;
   border-radius: 50%;
   display: grid;
   place-items: center;
@@ -1258,8 +1266,9 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
   font-weight: 800;
   font-size: 13px;
   color: #8b3356;
-  background: rgba(139, 29, 61, 0.08);
+  background: #f8eef3;
   border: 1px solid rgba(139, 29, 61, 0.2);
+  box-shadow: 0 0 0 4px #fffafd;
   transition: all 0.28s var(--ease-out);
 }
 .flow-step.completed {
@@ -1269,7 +1278,7 @@ button { font: inherit; background: none; border: none; cursor: pointer; color: 
 }
 .flow-step.completed .flow-dot {
   color: #8a2a50;
-  background: rgba(245, 124, 36, 0.28);
+  background: #f8c998;
   border-color: rgba(245, 124, 36, 0.5);
 }
 .flow-step.active .flow-dot {
