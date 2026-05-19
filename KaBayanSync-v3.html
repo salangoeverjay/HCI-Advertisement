@@ -148,14 +148,7 @@ const Ico=({n,s=20,c=T.plum,style:st={}})=>{
 const SBar=({light})=>{
   const col=light?'#fff':T.dark;
   return(
-    <div className="sbar" style={{color:col,position:'relative',background:'inherit'}}>
-      <span>9:41</span>
-      <div className="notch" style={{background:light?'rgba(0,0,0,0.5)':'#150810'}}/>
-      <div style={{display:'flex',gap:5,alignItems:'center'}}>
-        <svg width="16" height="11" viewBox="0 0 16 11" fill={col}><rect x="0" y="4" width="3" height="7" rx="1"/><rect x="4.5" y="2" width="3" height="9" rx="1"/><rect x="9" y="0" width="3" height="11" rx="1"/><rect x="13.5" y="1" width="2.5" height="8" rx="1" opacity=".3"/></svg>
-        <svg width="16" height="11" viewBox="0 0 18 12" fill="none"><rect x=".5" y=".5" width="13" height="10" rx="2" stroke={col}/><rect x="2" y="2" width="9" height="7" rx="1" fill={col}/><rect x="14.5" y="3.5" width="2.5" height="4" rx="1" fill={col}/></svg>
-      </div>
-    </div>
+    null
   );
 };
 
@@ -265,7 +258,7 @@ const Welcome=({nav})=>(
         </div>
         {/* orbiting dots */}
         {[0,60,120,180,240,300].map((deg,i)=>(
-          <div key={i} style={{position:'absolute',width:8,height:8,borderRadius:'50%',background:i%2===0?T.orange:'rgba(255,255,255,.3)',top:`${50+44*Math.sin(deg*Math.PI/180)}%`,left:`${50+44*Math.cos(deg*Math.PI/180)}%`,transform:'translate(-50%,-50%)'}}/>
+          <div key={i} style={{position:'absolute',width:8,height:8,borderRadius:'50%',background:i%2===0?T.orange:'rgba(255,255,255,.3)',top:`${50+44*Math.sin(deg*Math.PI/180)}%`,left:`${50+44*Math.cos(deg*Math.PI/180)}%`,transform:'translate(-50%,-45%)'}}/>
         ))}
       </div>
       {/* content */}
