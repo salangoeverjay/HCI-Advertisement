@@ -22,28 +22,10 @@
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a href="#top" class="nav-brand" aria-label="Ka-Bayan Sync home">
-      <!-- Animated inline SVG logo -->
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          <!-- Carabao head silhouette -->
-          <g class="logo-body">
-            <!-- Horns -->
-            <path class="logo-horn logo-horn-left" d="M25 30 Q15 20 8 28 Q12 32 20 35 Z" fill="#8B1D3D"/>
-            <path class="logo-horn logo-horn-right" d="M75 30 Q85 20 92 28 Q88 32 80 35 Z" fill="#8B1D3D"/>
-            <!-- Head -->
-            <path d="M20 40 Q20 25 50 22 Q80 25 80 40 L80 70 Q80 82 65 85 L35 85 Q20 82 20 70 Z" fill="#8B1D3D"/>
-            <!-- Left eye (wink) -->
-            <path class="logo-eye-wink" d="M36 48 Q40 45 44 48" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <!-- Right eye -->
-            <circle class="logo-eye-open" cx="62" cy="48" r="3" fill="#FFF4E6"/>
-            <!-- Smile -->
-            <path class="logo-smile" d="M38 60 Q50 70 62 60" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            <!-- Nose dots -->
-            <circle cx="46" cy="56" r="1.2" fill="#FFF4E6" opacity="0.6"/>
-            <circle cx="54" cy="56" r="1.2" fill="#FFF4E6" opacity="0.6"/>
-          </g>
-        </svg>
-      </span>
+      <!-- Animated SVG logo file -->
+      <object data="logo-animated.svg" type="image/svg+xml" class="logo-mark" aria-hidden="true" tabindex="-1">
+        <img src="logo-animated.svg" alt="Ka-Bayan Sync logo">
+      </object>
       <span class="nav-wordmark">
         <span class="nav-word-top">KA-BAYAN</span>
         <span class="nav-word-bot">SYNC</span>
@@ -58,6 +40,26 @@
     </nav>
 
     <a href="#cta" class="nav-cta">
+      <span>Join the Barangay</span>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+      <span class="nav-toggle-line"></span>
+    </button>
+  </div>
+
+  <div class="nav-mobile-menu" id="mobileMenu" aria-label="Mobile primary navigation">
+    <nav class="nav-mobile-links">
+      <a href="#how" data-nav>How it works</a>
+      <a href="#features" data-nav>Security</a>
+      <a href="#compare" data-nav>Compare</a>
+      <a href="#flow" data-nav>Flow</a>
+    </nav>
+
+    <a href="#cta" class="nav-mobile-cta">
       <span>Join the Barangay</span>
       <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -699,35 +701,53 @@
       </div>
 
       <div class="cta-visual" aria-hidden="true">
-        <!-- Animated mascot cluster -->
-        <svg viewBox="0 0 300 300" class="cta-mascot">
-          <!-- Back circle glow -->
-          <circle cx="150" cy="150" r="120" fill="#F57C24" opacity="0.12"/>
-          <circle cx="150" cy="150" r="90" fill="#F57C24" opacity="0.2"/>
+        <!-- Logo with glow rings, diamonds and fireflies -->
+        <div class="cta-logo-cluster">
+          <!-- Glow rings -->
+          <div class="cta-ring cta-ring-outer"></div>
+          <div class="cta-ring cta-ring-inner"></div>
 
-          <!-- Mascot -->
-          <g class="cta-carabao">
-            <path d="M100 100 Q90 80 75 90 Q82 98 95 105 Z" fill="#FFF4E6"/>
-            <path d="M200 100 Q210 80 225 90 Q218 98 205 105 Z" fill="#FFF4E6"/>
-            <path d="M90 125 Q90 90 150 85 Q210 90 210 125 L210 190 Q210 220 175 225 L125 225 Q90 220 90 190 Z" fill="#FFF4E6"/>
-            <path class="cta-eye-wink" d="M120 145 Q127 140 134 145" stroke="#8B1D3D" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <circle class="cta-eye-open" cx="178" cy="145" r="5" fill="#8B1D3D"/>
-            <path d="M125 175 Q150 195 175 175" stroke="#8B1D3D" stroke-width="4" fill="none" stroke-linecap="round"/>
-            <circle cx="140" cy="165" r="2" fill="#8B1D3D" opacity="0.6"/>
-            <circle cx="160" cy="165" r="2" fill="#8B1D3D" opacity="0.6"/>
-          </g>
+          <!-- The animated logo -->
+          <div class="cta-logo-wrap">
+            <object data="logo-animated.svg" type="image/svg+xml" class="cta-logo-svg" tabindex="-1">
+              <img src="logo-animated.svg" alt="Ka-Bayan Sync mascot">
+            </object>
+          </div>
 
-          <!-- Floating hearts / sparks -->
-          <g class="spark spark-1">
-            <path d="M50 80 L55 70 L60 80 L55 90 Z" fill="#F57C24"/>
-          </g>
-          <g class="spark spark-2">
-            <circle cx="250" cy="60" r="4" fill="#F57C24"/>
-          </g>
-          <g class="spark spark-3">
-            <path d="M260 220 L263 215 L268 218 L265 223 Z" fill="#8B1D3D"/>
-          </g>
-        </svg>
+          <!-- Diamond sparks -->
+          <svg class="cta-sparks" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+            <!-- Diamond top-right (orange, like the image) -->
+            <g class="spark spark-1">
+              <path d="M222 54 L228 46 L234 54 L228 62 Z" fill="#F57C24"/>
+            </g>
+            <!-- Small circle top-left -->
+            <g class="spark spark-2">
+              <circle cx="72" cy="82" r="5" fill="#F57C24"/>
+            </g>
+            <!-- Small diamond bottom-right (burgundy) -->
+            <g class="spark spark-3">
+              <path d="M256 230 L260 224 L264 230 L260 236 Z" fill="#8B1D3D"/>
+            </g>
+            <!-- Extra tiny circle lower-left -->
+            <g class="spark spark-4">
+              <circle cx="58" cy="220" r="3.5" fill="#FDB64A"/>
+            </g>
+            <!-- Extra diamond upper-left -->
+            <g class="spark spark-5">
+              <path d="M82 130 L86 124 L90 130 L86 136 Z" fill="#F57C24" opacity="0.7"/>
+            </g>
+          </svg>
+
+          <!-- Firefly particles -->
+          <div class="fireflies">
+            <span class="firefly ff-1"></span>
+            <span class="firefly ff-2"></span>
+            <span class="firefly ff-3"></span>
+            <span class="firefly ff-4"></span>
+            <span class="firefly ff-5"></span>
+            <span class="firefly ff-6"></span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -739,16 +759,9 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <span class="logo-mark logo-mark-sm" aria-hidden="true">
-            <svg viewBox="0 0 100 100">
-              <path d="M25 30 Q15 20 8 28 Q12 32 20 35 Z" fill="currentColor"/>
-              <path d="M75 30 Q85 20 92 28 Q88 32 80 35 Z" fill="currentColor"/>
-              <path d="M20 40 Q20 25 50 22 Q80 25 80 40 L80 70 Q80 82 65 85 L35 85 Q20 82 20 70 Z" fill="currentColor"/>
-              <path d="M36 48 Q40 45 44 48" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-              <circle cx="62" cy="48" r="3" fill="#FFF4E6"/>
-              <path d="M38 60 Q50 70 62 60" stroke="#FFF4E6" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-            </svg>
-          </span>
+          <object data="logo-animated.svg" type="image/svg+xml" class="logo-mark logo-mark-sm" aria-hidden="true" tabindex="-1">
+            <img src="logo-animated.svg" alt="Ka-Bayan Sync logo">
+          </object>
           <div>
             <div class="footer-word-top">KA-BAYAN</div>
             <div class="footer-word-bot">SYNC</div>
@@ -778,11 +791,12 @@
         <a href="#">Help center</a>
         <a href="#">Community rules</a>
         <a href="#">Dispute policy</a>
-        <a href="#">Contact</a>
+        <a href="mailto:arch_ist@gmail.com">arch_is@gmail.com</a>
       </div>
     </div>
 
     <div class="footer-base">
+      <span>Contact: <a href="mailto:arch_ist@gmail.com">arch_is@gmail.com</a></span>
       <span>© 2026 KA-BAYAN SYNC · Made in Panabo City, Davao del Norte</span>
       <span class="footer-tag">🇵🇭 Para sa bayan, para sa kapitbahay.</span>
     </div>

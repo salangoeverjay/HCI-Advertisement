@@ -7,6 +7,8 @@
 
   /* ---------- Nav scroll state ---------- */
   const nav = document.getElementById('nav');
+  const navToggle = document.querySelector('.nav-toggle');
+  const mobileMenu = document.getElementById('mobileMenu');
   let lastY = window.scrollY;
   const onScroll = () => {
     const y = window.scrollY;
@@ -16,6 +18,21 @@
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
+
+  const closeMobileMenu = () => {
+    if (!nav || !navToggle || !mobileMenu) return;
+    nav.classList.remove('menu-open');
+    navToggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-label', 'Open menu');
+  };
+
+  if (navToggle && mobileMenu && nav) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('menu-open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+  }
 
   /* ---------- Smooth scroll with offset ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -27,7 +44,12 @@
       e.preventDefault();
       const top = el.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top, behavior: 'smooth' });
+      if (mobileMenu && mobileMenu.contains(a)) closeMobileMenu();
     });
+  });
+
+  window.addEventListener('resize', () => {
+    if (window.matchMedia('(min-width: 769px)').matches) closeMobileMenu();
   });
 
   /* ---------- Counter animation on reveal ---------- */
@@ -149,7 +171,7 @@
   }
 
   /* ---------- Active nav link highlighting ---------- */
-  const navLinks = document.querySelectorAll('.nav-links a[data-nav]');
+  const navLinks = document.querySelectorAll('.nav-links a[data-nav], .nav-mobile-links a[data-nav]');
   const sections = Array.from(navLinks)
     .map(a => document.querySelector(a.getAttribute('href')))
     .filter(Boolean);
